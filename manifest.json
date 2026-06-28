@@ -1,0 +1,30 @@
+{
+  "name": "MineGuard – Mining Safety App",
+  "short_name": "MineGuard",
+  "description": "Mining safety companion app for ArcelorMittal Liberia. Works offline and supports emergency safety tools.",
+  "start_url": "/AML-MineGuard/",
+  "scope": "/AML-MineGuard/",
+  "display": "standalone",
+  "display_override": ["standalone", "window-controls-overlay"],
+  "background_color": "#0d0f1a",
+  "theme_color": "#1a1a2e",
+  "orientation": "portrait-primary",
+  "lang": "en",
+  "dir": "ltr",
+  "id": "/AML-MineGuard/",
+  "categories": ["productivity", "utilities", "medical"],
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
