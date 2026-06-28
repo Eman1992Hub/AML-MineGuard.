@@ -878,7 +878,7 @@ window.addEventListener("load", () => {
 const CURRENT_VERSION = "1.0.0";
 async function checkForUpdate() {
   try {
-    const res = await fetch("https://eman1992hub.github.io/AML-MineGuard/version.json");
+    const res = await fetch("https://eman1992hub.github.io/AML-MineGuard./version.json");
     const data = await res.json();
 
     if (data.version !== CURRENT_VERSION) {
