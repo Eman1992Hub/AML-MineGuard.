@@ -17,10 +17,7 @@
 <script>
 window.addEventListener("load", () => {
   if ("serviceWorker" in navigator) {
-    navigator.serviceWorker
-      .register("/AML-MineGuard/sw.js")
-      .then(() => console.log("SW Registered"))
-      .catch(console.error);
+    navigator.serviceWorker.register("/AML-MineGuard/sw.js");
   }
 });
 </script>
