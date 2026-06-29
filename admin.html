@@ -4,7 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MineGuard Admin Dashboard</title>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet" /></noscript>
   <style>
     :root {
       --bg: #0d0f1a;
@@ -1612,6 +1615,17 @@ function statusLabel(status) {
   if (status === 'resolved') return '✅ Resolved';
   if (status === 'reviewing') return '🔵 Under Review';
   return '🔴 Open';
+}
+</script>
+
+<!-- Service Worker registration — enables admin.html to work offline -->
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('./sw.js')
+      .then(function(reg) { console.log('[MineGuard Admin] SW registered, scope:', reg.scope); })
+      .catch(function(err) { console.log('[MineGuard Admin] SW registration failed:', err); });
+  });
 }
 </script>
 </body>
